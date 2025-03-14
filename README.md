@@ -1,5 +1,6 @@
 ✅ **Project Summary :**
-In this Zomato Restaurant Sentiment Classification project, we performed an end-to-end Data Science pipeline involving data wrangling, visualization, hypothesis testing, feature engineering, machine learning modeling, and model deployment readiness. The primary goal of this project was to analyze restaurant reviews and predict customer sentiment (Positive, Neutral, Negative), which can help Zomato and restaurant owners improve services, marketing, and customer experience.
+
+This project is aimed at analyzing customer reviews and restaurant metadata from Zomato to perform **Sentiment Classification and Restaurant Clustering. Using both Supervised and Unsupervised Machine Learning techniques**, the project explores how customers perceive different restaurants and how restaurants can be segmented based on key features such as cost, rating, cuisine variety, and customer feedback.
 
 * We used **two** datasets:
 1. **Zomato Restaurant Names & Metadata** (contains restaurant-specific information like cost, cuisines, collections, timings, etc.).
@@ -8,7 +9,7 @@ In this Zomato Restaurant Sentiment Classification project, we performed an end-
 📊 **Data Exploration & Preprocessing:**
 * First, we merged both datasets on **Restaurant Name**, resulting in a consolidated dataset containing both review text and restaurant-specific metadata.
 * Missing values were handled appropriately:
- * **Numerical columns **(e.g., Cost, Ratings, Pictures) filled with **median** values.
+ * **Numerical columns**(e.g., Cost, Ratings, Pictures) filled with **median** values.
  * **Categorical columns** filled with mode or placeholders.
 * Outliers in `Cost` were treated using the Interquartile Range (IQR) method.
  * **Feature engineering was applied to create new columns like:**
@@ -84,3 +85,13 @@ Three models were trained and evaluated:
 * **Actionable insights** for restaurant owners to improve offerings.
 * **Sentiment analysis** helps Zomato tailor personalized recommendations and improve user retention.
 * Targeted marketing based on real-time sentiment trends.
+
+**A. The Supervised Learning part (Sentiment Analysis)** focuses on predicting whether a customer's sentiment toward a restaurant is **Good, Average, or Poor** based on their review content. We used **TF-IDF Vectorization** for review text and applied **Logistic Regression, Random Forest, and SVM models** to classify sentiments.
+
+**B. The Unsupervised Learning part (Restaurant Clustering)** segments restaurants into meaningful groups using **KMeans Clustering** based on numeric and derived features such as Cost (log-transformed), Cuisine count, Review length, and Rating. Clusters were analyzed to identify potential market segments.
+
+**Key achievements:**
+
+* Successfully built and tuned Sentiment Classification models.
+* Clustered restaurants into interpretable groups based on customer preferences and restaurant attributes.
+* Delivered actionable insights that can guide Zomato and restaurants in marketing and service improvements.
